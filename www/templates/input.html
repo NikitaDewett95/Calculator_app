@@ -3,61 +3,43 @@
 
       <script>
           $(document).ready(function(){
- 
-$(".calculator-amortization").accrue({
-  mode: "amortization"
-});
-});
-</script>
-      <h4><b>Basic Information  </b></h>
-      
-      
-       <div class="calculator-amortization"> 
-           
+            $(".calculator-loan").accrue({
+              mode: "amortization"
+            });
 
-          
-          
-          
-          <div class="accrue-field-amount" >
-            
-                   <label class="item item-input item-stacked-label">
-    <span class="input-label">Loan Amount:</span>
-    <input type="text" class="amount" placeholder="amount" ng-model="data.message">
-  </label>
-        
-          </div>
-           
-          <div class="accrue-field-rate">
-              
-               <label class="item item-input item-stacked-label">
-    <span class="input-label">Rate (APR):</span>
-    <input type="text" class="rate" placeholder="rate">
-  </label>
-              
-          </div>
-           
-          <div class="accrue-field-term" >
-               <label class="item item-input item-stacked-label">
-    <span class="input-label">Term:</span>
-    <input type="text" class="term" placeholder="term" ng-model = "term.message">
-                   <small>Format: 12m, 36m, 3y, 7y</small>
-  </label>
-             
-          </div>
-          
-          
-         
-   
-           
-           
-           
-           
+            $(".calculator-loan").accrue({});
+          });
+      </script>
+
+      <h4><b>Basic Information</b></h4>
+
+    <!--<div class="calculator-loan"></div>-->
+
+    <div class="calculator-loan">
+
+      <div class="accrue-field-amount" >
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Loan Amount:</span>
+          <input type="text" class="amount" placeholder="amount" ng-model="data.message">
+        </label>
       </div>
-           
-           
-           
+
+      <div class="accrue-field-rate">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Rate (APR):</span>
+          <input type="text" class="rate" placeholder="rate">
+        </label>
       </div>
-      
-    
+
+      <div class="accrue-field-term" >
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Term:</span>
+          <input type="text" class="term" placeholder="term" ng-model = "term.message">
+          <small>Format: 12m, 36m, 3y, 7y</small>
+        </label>
+      </div>
+
+    </div>
+
   </ion-content>
 </ion-view>

@@ -42,14 +42,14 @@
                 // If we are using the default results div and it doesn't exist, create it.
                 var output_elem;
                 if ( options.response_output_div === ".results" ) {
-                
+
                     if ( elem.find(".results").length === 0 ) {
                         elem.append('<div class="results"></div>');
                     }
 
                     // Set the output div as a variable so we can refer to it more easily.
                     output_elem = elem.find(".results");
-                
+
                 } else {
 
                     // Set the output div as a variable so we can refer to it more easily.
@@ -126,7 +126,7 @@
 
 
     // DEFAULTS
-    // Set up some default options for our plugin that can be overridden 
+    // Set up some default options for our plugin that can be overridden
     // as needed when we actually instantiate our plugin on a form.
     $.fn.accrue.options = {
         mode: "basic",
@@ -151,7 +151,7 @@
             term: "Format: 12m, 36m, 3y, 7y"
         },
         response_output_div: ".results",
-        response_basic: 
+        response_basic:
             '<p><strong>Monthly Payment:</strong><br />$%payment_amount%</p>'+
             '<p><strong>Number of Payments:</strong><br />%num_payments%</p>'+
             '<p><strong>Total Payments:</strong><br />$%total_payments%</p>'+
@@ -185,7 +185,7 @@
         } else {
             field = "";
         }
-        
+
         // If we have the field value, return it right away so that the
         // calculator doesn't write the field to the form div since we
         // don't need it to.
@@ -212,7 +212,7 @@
 
 
     // CALCULATE BASIC
-    // for the basic calculation, we're just getting the values and 
+    // for the basic calculation, we're just getting the values and
     // calculating loan info for a single loan.
     var calculateBasic = function( elem, options, output_elem ){
 
@@ -302,7 +302,7 @@
                 .replace( "%loan_2_total_payments%", loan_1_info.total_payments_formatted )
                 .replace( "%loan_2_total_interest%", formatNumber(loan_1_info.total_interest_formatted) );
             output_elem.html( output_content );
-        
+
         } else {
 
             // output an error
@@ -318,7 +318,7 @@
     // This method outputs a table with the repayment schedule
     // for a single loan object.
     var calculateAmortization = function( elem, options, output_elem ){
-        
+
         // Get the loan information so we can build out our amortization
         // schedule table.
         var loan_info = $.loanInfo({
@@ -348,7 +348,7 @@
                 counter_balance = parseInt(loan_info.original_amount, 10);
 
             // Start appending the table rows to our output variable.
-            for ( var i=0; i<loan_info.num_payments; i++) { 
+            for ( var i=0; i<loan_info.num_payments; i++) {
 
                 // Record the payment in our counter variables.
                 counter_interest = counter_interest+interest_per_payment;
@@ -356,14 +356,14 @@
                 counter_balance = counter_balance-amount_from_balance;
 
                 // bold the last row of the table by using <th>s for
-                // the values. 
+                // the values.
                 var cell_tag = "td";
                 if ( i==(loan_info.num_payments-1) ) {
                     cell_tag = "th";
                 }
 
                 // Append a row to the table
-                output_content = output_content+ 
+                output_content = output_content+
                     '<tr>'+
                     '<'+cell_tag+' class="accrue-payment-number">'+(i+1)+'</'+cell_tag+'>'+
                     '<'+cell_tag+' class="accrue-payment-amount">$'+formatNumber(loan_info.payment_amount_formatted)+'</'+cell_tag+'>'+
@@ -435,8 +435,8 @@
                 payment_amount: monthly,
                 payment_amount_formatted: monthly.toFixed(2),
                 num_payments: term,
-                total_payments: ( monthly * term ), 
-                total_payments_formatted: ( monthly * term ).toFixed(2), 
+                total_payments: ( monthly * term ),
+                total_payments_formatted: ( monthly * term ).toFixed(2),
                 total_interest: ( ( monthly * term ) - amount ),
                 total_interest_formatted: ( ( monthly * term ) - amount ).toFixed(2)
             };
@@ -447,9 +447,9 @@
             return 0;
         }
     };
-    
-    
-    
+
+
+
     // REVERSE LOAN INFORMATION FUNCTION
     // This is a copy of the above, only that given a payment amount, rate and term it
     // will return the principal amount that can be borrowed.
@@ -472,7 +472,7 @@
 
         // Now compute.
         var x = payment * (1 - Math.pow(1 + monthly_interest, -1 * term)) * (12/(annual_interest));
-                
+
         // If the result is a finite number, the user's input was good and
         // we have meaningful results to display
         if ( x>0 ) {
@@ -483,8 +483,8 @@
                 payment_amount: payment,
                 payment_amount_formatted: ( payment * 1 ).toFixed(2),
                 num_payments: term,
-                total_payments: ( payment * term ), 
-                total_payments_formatted: ( payment * term ).toFixed(2), 
+                total_payments: ( payment * term ),
+                total_payments_formatted: ( payment * term ).toFixed(2),
                 total_interest: ( ( payment * term ) - x ),
                 total_interest_formatted: ( ( payment * term ) - x ).toFixed(2)
             };
