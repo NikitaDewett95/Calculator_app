@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temp</title>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+</head>
+<body>
+
+<div class="ct-chart ct-golden-section" id="chart4" style="height: 50%;"></div>
+
+
+<script type="text/javascript" charset="utf-8">
+
+  var chart4 =  new Chartist.Line('#chart4', {
+    labels: ["20/01/2016","21/01/2016", "22/01/2016", "23/01/2016", "24/01/2016", "25/01/2016"],
+    series: [[123,123,125,121,140,144],[82,65,82],[77,33,77]]
+  });
+
+  chart4.on('draw', function(data) {
+    if(data.type === 'line' || data.type === 'area') {
+      data.element.animate({
+        d: {
+          begin: 2000 * data.index,
+          dur: 2000,
+          from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+          to: data.path.clone().stringify(),
+          easing: Chartist.Svg.Easing.easeOutQuint
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
