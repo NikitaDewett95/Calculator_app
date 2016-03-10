@@ -378,11 +378,11 @@
                 '</tbody></table>';
 
             // Push our output content into the output element.
-            output_elem.html( output_content );
+            $('#schedule').html( output_content );
         } else {
 
             // Values aren't good yet, show the error.
-            output_elem.html( options.error_text );
+            $('#schedule').html( options.error_text );
         }
 
         // Execute callback, passing in loan information.

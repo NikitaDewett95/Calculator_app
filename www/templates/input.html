@@ -3,30 +3,59 @@
 
       <script>
           $(document).ready(function(){
- $(".calculator-loan").accrue();
+ 
+$(".calculator-amortization").accrue({
+  mode: "amortization"
+});
 });
 </script>
       <h4><b>Basic Information  </b></h>
-       <div class="calculator-loan"> 
+      
+      
+       <div class="calculator-amortization"> 
            
-      <div class = "loan-form">
+
           
           
           
-          <div class="accrue-field-amount">
-              <p ><label id = "text_lb">Loans Amount:</label>
-                  
-                  <input type="text" class="amount"  value=" $7,500" ></p>
+          <div class="accrue-field-amount" >
+            
+                   <label class="item item-input item-stacked-label">
+    <span class="input-label">Loan Amount:</span>
+    <input type="text" class="amount" placeholder="amount" ng-model="data.message">
+  </label>
+        
           </div>
+           
           <div class="accrue-field-rate">
-              <p><label>Rate (APR):</label><input type="text" class="rate" value=" 17%"></p>
+              
+               <label class="item item-input item-stacked-label">
+    <span class="input-label">Rate (APR):</span>
+    <input type="text" class="rate" placeholder="rate">
+  </label>
+              
           </div>
-          <div class="accrue-field-term">
-              <p><label>Term:</label><input type="text" class="term" value=" 36m"><small>Format: 12m, 36m, 3y, 7y</small></p>
+           
+          <div class="accrue-field-term" >
+               <label class="item item-input item-stacked-label">
+    <span class="input-label">Term:</span>
+    <input type="text" class="term" placeholder="term" ng-model = "term.message">
+                   <small>Format: 12m, 36m, 3y, 7y</small>
+  </label>
+             
           </div>
           
           
-          </div>
+         
+   
+           
+           
+           
+           
+      </div>
+           
+           
+           
       </div>
       
     
