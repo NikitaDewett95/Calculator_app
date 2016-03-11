@@ -19,25 +19,56 @@ div {
 }
 	
 table{
+    
 width: 100%;
+    
 }
 
 tr:last-child {
+    
 background-color: rgba(112,198,240,0.4);
 
 }
 tr{
+    
 text-align: center;
 }
+
 td{
+    
 padding: 2% 2%;
 }
+
 #Cal_header{
+    
     text-align: center;
    
-
 }
+
 .backgrnd{
     
      background-color: #ECECEC;
 }
+
+
+.margins{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+input{
+     border-radius: 5%;
+    width: 25%;
+}
+.payment_nubmer{
+    width: 23%;
+}
+.mortgage_name{
+    width: 100%;
+}
+.notes{
+height: 100px;
+    width: 100%
+        
+}
+
+

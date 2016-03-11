@@ -20,7 +20,7 @@
       <div class="accrue-field-amount" >
         <label class="item item-input item-stacked-label">
           <span class="input-label">Loan Amount:</span>
-          <input type="text" class="amount" placeholder="amount" ng-model="data.message">
+          <input type="text" class="amount" placeholder="amount">
         </label>
       </div>
 
@@ -34,12 +34,35 @@
       <div class="accrue-field-term" >
         <label class="item item-input item-stacked-label">
           <span class="input-label">Term:</span>
-          <input type="text" class="term" placeholder="term" ng-model = "term.message">
+          <input type="text" class="term" placeholder="term">
           <small>Format: 12m, 36m, 3y, 7y</small>
         </label>
       </div>
 
     </div>
-
+      <h4><b>Extra Payments</b></h4>
+      
+      Add <input class ="extra_payments"> Extra to Payments
+      <div class="margins"></div>
+      Add <input class = "at_payment"> At Payment # <input class = "payment_nubmer" placeholder="#">
+      
+     <h4><b>Additional Options</b></h4>
+      Annual Property Tax____________<input class ="annual_tax">
+      <div class="margins"></div>
+      Annual Home Insurance________<input class = "annual_isurance">
+      <div class="margins"></div>
+      PMI in %________________________  <input class= "pmi" placeholder="%">
+      
+        <h4><b>Customization</b></h4>
+      
+        <p>Mortgage Name</p>
+      
+      <div class="margins"></div>
+      
+      <input class = "mortgage_name">
+      <div class="margins"></div>
+      <p>Notes</p>
+      <input class="notes">
+      
   </ion-content>
 </ion-view>
