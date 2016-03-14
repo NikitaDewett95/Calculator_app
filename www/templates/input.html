@@ -1,23 +1,23 @@
 <ion-view view-title="Input">
   <ion-content class="padding">
 
-      <script>
-          $(document).ready(function(){
-            $(".calculator-loan").accrue({
-              mode: "amortization"
-            });
+    <script>
+      $(document).ready(function () {
+        $(".calculator-loan").accrue({
+          mode: "amortization"
+        });
 
-            $(".calculator-loan").accrue({});
-          });
-      </script>
 
-      <h4><b>Basic Information</b></h4>
+      });
+    </script>
+
+    <h4><b>Basic Information</b></h4>
 
     <!--<div class="calculator-loan"></div>-->
 
     <div class="calculator-loan">
 
-      <div class="accrue-field-amount" >
+      <div class="accrue-field-amount">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Loan Amount:</span>
           <input type="text" class="amount" placeholder="amount">
@@ -31,38 +31,70 @@
         </label>
       </div>
 
-      <div class="accrue-field-term" >
+      <div class="accrue-field-term">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Term:</span>
           <input type="text" class="term" placeholder="term">
           <small>Format: 12m, 36m, 3y, 7y</small>
         </label>
       </div>
-
     </div>
+
       <h4><b>Extra Payments</b></h4>
-      
-      Add <input class ="extra_payments"> Extra to Payments
+
+        <label for="extra_payments">Add
+          <input id="extra_payments"> Extra to Payments
+        </label>
+
+    <div class="margins"></div>
+
+        <label for="at_payment">Add
+          <input id="at_payment">
+        </label>
+
+        <label for="payment_nubmer">At Payment #
+          <input id="payment_nubmer" placeholder="#">
+        </label>
+
+    <h4><b>Additional Options</b></h4>
+
+        <label for="annual_tax">Annual Property Tax
+          <input id="annual_tax">
+        </label>
+
       <div class="margins"></div>
-      Add <input class = "at_payment"> At Payment # <input class = "payment_nubmer" placeholder="#">
-      
-     <h4><b>Additional Options</b></h4>
-      Annual Property Tax____________<input class ="annual_tax">
+
+        <label for="annual_isurance">Annual Home Insurance
+          <input id="annual_isurance">
+        </label>
+
       <div class="margins"></div>
-      Annual Home Insurance________<input class = "annual_isurance">
-      <div class="margins"></div>
-      PMI in %________________________  <input class= "pmi" placeholder="%">
-      
-        <h4><b>Customization</b></h4>
-      
-        <p>Mortgage Name</p>
-      
-      <div class="margins"></div>
-      
-      <input class = "mortgage_name">
-      <div class="margins"></div>
-      <p>Notes</p>
-      <input class="notes">
-      
+
+        <label for="pmi">PMI in %
+          <input id="pmi" placeholder="%">
+        </label>
+
+    <h4><b>Customization</b></h4>
+
+
+
+         <label for="name">
+              <p>Mortgage Name</p>
+            <input id="name">
+         </label>
+
+         <label for="notes">
+              <p>Notes</p>
+             <textarea id="notes"></textarea>
+          </label>
+
+
+
+      <div class="button-bar">
+            <a class="button button-full button-positive">Clear</a>
+            <a class="button button-full button-positive" ng-click="go_to_calculate()">Calculate</a>
+            <a class="button button-full button-positive">Settings</a>
+      </div>
+
   </ion-content>
 </ion-view>
