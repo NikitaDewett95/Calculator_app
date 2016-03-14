@@ -24,8 +24,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    
-    
+
+
 $ionicConfigProvider.tabs.position('bottom');
    $ionicConfigProvider.navBar.alignTitle('center');
   // Ionic uses AngularUI Router which uses the concept of states
@@ -53,26 +53,26 @@ $ionicConfigProvider.tabs.position('bottom');
     }
   })
 
-  
+
   .state('tab.calculation', {
       url: '/calculation',
       views: {
         'tab-calculation': {
           templateUrl: 'templates/calculation.html',
           controller: 'CalculationCtrl'
-            
+
         }
       }
     })
-  
-  
-  
-  
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
 
   .state('tab.schedule', {
     url: '/schedule',
@@ -83,9 +83,9 @@ $ionicConfigProvider.tabs.position('bottom');
       }
     }
   })
-  
-  
-  
+
+
+
   .state('tab.graph', {
     url: '/graph',
     views: {
@@ -95,12 +95,25 @@ $ionicConfigProvider.tabs.position('bottom');
       }
     }
   })
-  
-  
-  
-  
-  
-  
+
+
+
+
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-input': {
+          templateUrl: 'templates/settings.html',
+          controller: 'SettingsCtrl'
+        }
+      }
+    })
+
+
+
+
+
+
   .state('tab.saved', {
     url: '/saved',
     views: {
@@ -110,8 +123,8 @@ $ionicConfigProvider.tabs.position('bottom');
       }
     }
   });
-    
-    
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/input');

@@ -56,22 +56,29 @@ padding: 2% 2%;
     margin-bottom: 2%;
 }
 input{
-     border-radius: 8px;
-    width: 25%;
+     border-radius: 6px;
+    width: 29%;
+  border: 1px solid #bbb;
 }
-.payment_nubmer{
-    width: 23%;
+#payment_nubmer{
+  float: right;
 }
 
 #annual_tax{
   float: right;
+  border: 1px solid #bbb;
+  border-radius: 6px;
 }
 #pmi{
-  float:right;
+  float: right;
+  border: 1px solid #bbb;
+  border-radius: 6px;
 }
 #annual_isurance
 {
-  float:right;
+  float: right;
+  border: 1px solid #bbb;
+  border-radius: 6px;
 }
 
 
@@ -94,4 +101,23 @@ input{
   line-height: 40px; font-size: 17px;
   border: 1px solid #bbb;
   border-radius: 10px;
+}
+#Review{
+
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 20px;
+
+
+}
+.review_text{
+  margin-top: 10%;
+}
+
+
+
+
+
+.text-center{
+  text-align: center;
 }

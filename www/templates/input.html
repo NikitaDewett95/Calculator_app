@@ -14,7 +14,7 @@
     <h4><b>Basic Information</b></h4>
 
     <!--<div class="calculator-loan"></div>-->
-
+<div id = "Main">
     <div class="calculator-loan">
 
       <div class="accrue-field-amount">
@@ -33,12 +33,21 @@
 
       <div class="accrue-field-term">
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Term:</span>
+          <span class="input-label">Term (<small>Format: 12m, 36m, 3y, 7y</small>) :</span>
           <input type="text" class="term" placeholder="term">
-          <small>Format: 12m, 36m, 3y, 7y</small>
-        </label>
+          </label>
+
       </div>
     </div>
+      <h4><b>Payment Frequency</b></h4>
+
+      <div class= "text-center">
+         <button class="button button-positive">Wk</button>
+         <button class="button button-positive">Bi-Wk</button>
+         <button class="button button-positive">Mo</button>
+         <button class="button button-positive">Qtr</button>
+         <button class="button button-positive">Yr</button>
+        </div>
 
       <h4><b>Extra Payments</b></h4>
 
@@ -91,10 +100,11 @@
 
 
       <div class="button-bar">
-            <a class="button button-full button-positive">Clear</a>
-            <a class="button button-full button-positive" ng-click="go_to_calculate()">Calculate</a>
-            <a class="button button-full button-positive">Settings</a>
+            <a class="button button-full button-positive" ng-controller="InputCtrl" ng-click="clear()">Clear</a>
+            <a class="button button-full button-positive" href="#/tab/calculation">Calculate</a>
+            <a class="button button-full button-positive" href="#/tab/settings">Settings</a>
       </div>
+</div>
 
   </ion-content>
 </ion-view>
