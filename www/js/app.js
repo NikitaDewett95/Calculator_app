@@ -130,3 +130,4 @@ $ionicConfigProvider.tabs.position('bottom');
   $urlRouterProvider.otherwise('/tab/input');
 
 });
+

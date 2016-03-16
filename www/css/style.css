@@ -59,9 +59,11 @@ input{
      border-radius: 6px;
     width: 29%;
   border: 1px solid #bbb;
+
 }
 #payment_nubmer{
   float: right;
+  width: 17%;
 }
 
 #annual_tax{
@@ -73,12 +75,15 @@ input{
   float: right;
   border: 1px solid #bbb;
   border-radius: 6px;
+
 }
 #annual_isurance
 {
   float: right;
   border: 1px solid #bbb;
   border-radius: 6px;
+
+
 }
 
 
@@ -121,3 +126,15 @@ input{
 .text-center{
   text-align: center;
 }
+.additional_inputs label {
+
+font-size: 18px;
+
+}
+.additional_inputs input {
+
+ height: 30px ;
+
+}
+
+

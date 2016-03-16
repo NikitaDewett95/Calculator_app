@@ -11,7 +11,7 @@
       });
     </script>
 
-    <h4><b>Basic Information</b></h4>
+    <h3><b>Basic Information</b></h3>
 
     <!--<div class="calculator-loan"></div>-->
 <div id = "Main">
@@ -39,17 +39,20 @@
 
       </div>
     </div>
-      <h4><b>Payment Frequency</b></h4>
+      <h3><b>Payment Frequency</b></h3>
 
-      <div class= "text-center">
-         <button class="button button-positive">Wk</button>
-         <button class="button button-positive">Bi-Wk</button>
-         <button class="button button-positive">Mo</button>
-         <button class="button button-positive">Qtr</button>
-         <button class="button button-positive">Yr</button>
+      <div class= "text-center" ng-controller="InputCtrl">
+         <button class="button button-positive" id = "wk">Wk</button>
+         <button class="button button-positive" id = "bi-wk">Bi-Wk</button>
+         <button class="button button-positive" id = "mo">Mo</button>
+         <button class="button button-positive" id = "qtr">Qtr</button>
+         <button class="button button-positive" id = "yr">Yr</button>
         </div>
 
-      <h4><b>Extra Payments</b></h4>
+
+      <h3><b>Extra Payments</b></h3>
+
+    <div class="additional_inputs">
 
         <label for="extra_payments">Add
           <input id="extra_payments"> Extra to Payments
@@ -57,15 +60,17 @@
 
     <div class="margins"></div>
 
+
+
         <label for="at_payment">Add
           <input id="at_payment">
         </label>
 
-        <label for="payment_nubmer">At Payment #
+        <label for="payment_nubmer">At payment #
           <input id="payment_nubmer" placeholder="#">
         </label>
 
-    <h4><b>Additional Options</b></h4>
+    <h3><b>Additional Options</b></h3>
 
         <label for="annual_tax">Annual Property Tax
           <input id="annual_tax">
@@ -82,20 +87,23 @@
         <label for="pmi">PMI in %
           <input id="pmi" placeholder="%">
         </label>
+    </div>
 
-    <h4><b>Customization</b></h4>
+    <h3><b>Customization</b></h3>
 
 
 
          <label for="name">
-              <p>Mortgage Name</p>
+              <h4>Mortgage Name</h4>
             <input id="name">
          </label>
 
          <label for="notes">
-              <p>Notes</p>
+              <h4>Notes</h4>
              <textarea id="notes"></textarea>
           </label>
+
+
 
 
 
