@@ -1,7 +1,17 @@
 angular.module('starter.controllers', [])
 
 
-.controller('InputCtrl', function($scope) {
+.controller('InputCtrl', function($scope,$state) {
+
+    $scope.clicked = function() {
+      $('#GO_TO').click(function () {
+
+        $('#GO_TO').hide();
+        $state.go("tab.input");
+      });
+    };
+
+
     $scope.clear = function(){
 
       $('#Main').find('input').each(function () {
@@ -92,7 +102,7 @@ angular.module('starter.controllers', [])
     $(function() {
 
       $("#none").click(function () {
-        $( "#payment" ).text( "Payment:___");
+        $('.add_here').empty();
         $(this).attr("disabled", "disabled");
         $("#usd").removeAttr("disabled");
         $("#eur").removeAttr("disabled");
@@ -102,6 +112,8 @@ angular.module('starter.controllers', [])
 
       // if you want first button to be disabled when second button is clicked
       $("#usd").click(function () {
+        $('.add_here').empty();
+        $('.add_here').append(' $');
         $(this).attr("disabled", "disabled");
         $("#none").removeAttr("disabled");
         $("#eur").removeAttr("disabled");
@@ -110,6 +122,8 @@ angular.module('starter.controllers', [])
       });
 
       $("#eur").click(function () {
+        $('.add_here').empty();
+        $('.add_here').append(' €');
         $(this).attr("disabled", "disabled");
         $("#none").removeAttr("disabled");
         $("#usd").removeAttr("disabled");
@@ -119,6 +133,8 @@ angular.module('starter.controllers', [])
       });
 
       $("#gbp").click(function () {
+        $('.add_here').empty();
+        $('.add_here').append(' £');
         $(this).attr("disabled", "disabled");
         $("#none").removeAttr("disabled");
         $("#usd").removeAttr("disabled");
@@ -127,6 +143,8 @@ angular.module('starter.controllers', [])
       });
 
       $("#yen").click(function () {
+        $('.add_here').empty();
+        $('.add_here').append(' ¥');
         $(this).attr("disabled", "disabled");
         $("#none").removeAttr("disabled");
         $("#usd").removeAttr("disabled");

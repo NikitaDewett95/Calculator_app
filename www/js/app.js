@@ -127,7 +127,7 @@ $ionicConfigProvider.tabs.position('bottom');
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/input');
+  $urlRouterProvider.otherwise('/tab/schedule');
 
 });
 
