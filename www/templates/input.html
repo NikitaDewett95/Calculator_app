@@ -20,7 +20,7 @@
       <div class="accrue-field-amount">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Loan Amount:</span>
-          <input type="text" class="amount" placeholder="amount">
+          <input type="text" id="amount" class="amount" placeholder="amount">
         </label>
       </div>
 
@@ -109,7 +109,7 @@
 
       <div class="button-bar">
             <a class="button button-full button-positive" ng-controller="InputCtrl" ng-click="clear()">Clear</a>
-            <a class="button button-full button-positive" href="#/tab/calculation">Calculate</a>
+            <a class="button button-full button-positive" ng-controller="GraphCtrl" ng-click="drawGraph()" href="#/tab/calculation">Calculate</a>
             <a class="button button-full button-positive" href="#/tab/settings">Settings</a>
       </div>
 </div>

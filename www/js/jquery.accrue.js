@@ -165,7 +165,8 @@
 	// This function is used to add thousand seperators to numerical ouput
 	// as a means of properly formatting money
     function formatNumber (num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        //return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+      return num
     }
 
     // GET FIELD
@@ -365,11 +366,11 @@
                 // Append a row to the table
                 output_content = output_content+
                     '<tr>'+
-                    '<'+cell_tag+' class="accrue-payment-number">'+(i+1)+'</'+cell_tag+'>'+
-                    '<'+cell_tag+' class="accrue-payment-amount">$'+formatNumber(loan_info.payment_amount_formatted)+'</'+cell_tag+'>'+
-                    '<'+cell_tag+' class="accrue-total-interest">$'+formatNumber(counter_interest.toFixed(2))+'</'+cell_tag+'>'+
-                    '<'+cell_tag+' class="accrue-total-payments">$'+formatNumber(counter_payment.toFixed(2))+'</'+cell_tag+'>'+
-                    '<'+cell_tag+' class="accrue-balance">$'+formatNumber(counter_balance.toFixed(2))+'</'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-payment-number">'+(i+1)+' </'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-payment-amount">'+formatNumber(loan_info.payment_amount_formatted)+'</'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-total-interest">'+formatNumber(counter_interest.toFixed(2))+'</'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-total-payments">'+formatNumber(counter_payment.toFixed(2))+'</'+cell_tag+'>'+
+                    '<'+cell_tag+' class="accrue-balance"> '+formatNumber(counter_balance.toFixed())+'</'+cell_tag+'>'+
                     '</tr>';
             }
 

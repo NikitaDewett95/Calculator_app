@@ -93,7 +93,25 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('GraphCtrl', function($scope) {})
+.controller('GraphCtrl', function($scope) {
+
+  $scope.drawGraph = function() {
+    console.log('work');
+    var tempData=$('.accrue-balance').text();
+    tempData=tempData.split(' ');
+    var amount = document.getElementById("amount").value;
+    tempData.splice(1,0,amount);
+    tempData.join(', ');
+    chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        columns: [
+          tempData
+        ]
+      }
+    });
+  }
+})
 
 
 
