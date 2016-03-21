@@ -96,6 +96,7 @@ angular.module('starter.controllers', [])
 .controller('GraphCtrl', function($scope) {
 
   $scope.drawGraph = function() {
+      
     console.log('work');
     var tempData=$('.accrue-balance').text();
     tempData=tempData.split(' ');
@@ -111,6 +112,7 @@ angular.module('starter.controllers', [])
       }
     });
   }
+  
 })
 
 
